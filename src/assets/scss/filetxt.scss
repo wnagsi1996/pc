@@ -1,0 +1,26 @@
+.help-info{
+	h2{
+		text-align: center;
+		font-size:$text-size-md;
+		padding-bottom: 20px;
+	}
+	p{
+		padding: 6px 0;
+		color:$text-color-three;
+		line-height: 24px;
+	}
+	h3{
+		margin-top: 20px;
+	}
+	h5{
+		margin-top: 10px;
+	}
+	ul {
+		padding-left: 20px;
+		li{
+			list-style: disc;
+			line-height: 24px;
+		}
+	}
+	
+}

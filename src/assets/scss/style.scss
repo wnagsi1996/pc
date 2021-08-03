@@ -1,0 +1,146 @@
+//宽度
+$doc-width:1400px;
+//字体大小
+$text-size-xs:12px;
+$text-size-sm:16px;
+$text-size-md:18px;
+$text-size-lg:24px;
+$text-size-2x:30px;
+$text-size-3x:36px;
+$text-size-4x:42px;
+
+//字体颜色
+$text-color-brand:#e41c1d;
+$text-color-brand-fu:#f39a0f;
+$text-color-one:#303133;
+$text-color-two:#606266;
+$text-color-three:#909399;
+$text-color-four:#C0C4CC;
+$text-color-success:#67C23A;
+$text-color-warning:#E6A23C;
+$text-color-danger:#F56C6C;
+$text-color-info:#909399;
+
+//背景颜色
+$bj-color-brand:#e41c1d;
+$bj-color-brand-fu:#f39a0f;
+$bj-color-success:#67C23A;
+$bj-color-warning:#E6A23C;
+$bj-color-danger:#F56C6C;
+$bj-color-info:#909399;
+$bj-color-gray:#f7f7f7;
+
+//圆角
+$border-radius-xs:2px;
+$border-radius-sm:4px;
+$border-radius-md:10px;
+$border-radius-lg:20px;
+$border-radius-2x:30px;
+
+//投影
+$box-shadow-deep: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+$box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+//圆角混合器
+@mixin border-radius-xs {
+	border-radius: $border-radius-xs;
+	-webkit-border-radius: $border-radius-xs;
+	-moz-border-radius: $border-radius-xs;
+}
+@mixin border-radius-sm {
+	border-radius: $border-radius-sm;
+	-webkit-border-radius: $border-radius-sm;
+	-moz-border-radius: $border-radius-sm;
+}
+@mixin border-radius-md {
+	border-radius: $border-radius-md;
+	-webkit-border-radius: $border-radius-md;
+	-moz-border-radius: $border-radius-md;
+}
+@mixin border-radius-lg {
+	border-radius: $border-radius-lg;
+	-webkit-border-radius: $border-radius-lg;
+	-moz-border-radius: $border-radius-lg;
+}
+@mixin border-radius-2x {
+	border-radius: $border-radius-2x;
+	-webkit-border-radius: $border-radius-2x;
+	-moz-border-radius: $border-radius-2x;
+}
+
+//单行溢出隐藏
+@mixin heightHidden {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+//多行溢出隐藏
+@mixin heightHiddens($clamp:3) {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $clamp;
+	overflow: hidden;
+}
+
+//申明盒子，盒子两端对其，内容中间对其
+@mixin flexBetweeCenter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+//删除线
+@mixin strikethrough {
+	color: $text-color-three;
+	text-decoration: line-through;
+}
+@mixin button {
+	text-align: center;
+	border-radius: $border-radius-sm;
+	border:none;
+	color: #fff;
+	font-size: $text-size-sm;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+@mixin buttonBrand {
+	background-color: $bj-color-brand;
+	@include button;
+	&:hover{
+		background-color: #d60607;
+	}
+}
+
+@mixin buttonBrandfu {
+	background-color: $bj-color-brand-fu;
+	@include button;
+	&:hover{
+		background-color: #ff9e08;
+	}
+}
+@mixin buttonfb {
+	background-color: #3b5998;
+	@include button;
+	display: flex;
+	align-items: center;
+	&:hover{
+		background-color: #526ea7;
+	}
+}
+
+@mixin buttonPayPal {
+	height: 40px;
+	line-height: 40px;
+	background-color: #337ab7;
+	text-align: center;
+	border-radius: $border-radius-sm;
+	border:none;
+	color: #fff;
+	font-size: $text-size-sm;
+	cursor: pointer;
+	transition: all .3s;
+	&:hover{
+		background-color: #2e6da4;
+	}
+}
